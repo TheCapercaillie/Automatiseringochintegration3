@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OTSystem": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
