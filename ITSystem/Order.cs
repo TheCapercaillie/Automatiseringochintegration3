@@ -8,6 +8,15 @@ namespace ITSystem
 {
     public enum OrderStatus { Pending, InProgress, Completed, Failed }
 
+    //public class Order
+    //{
+    //    public int Id { get; set; }
+    //    public string Product { get; set; } = "";
+    //    public int Quantity { get; set; }
+    //    public OrderStatus Status { get; set; } = OrderStatus.Pending;
+    //    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    //}
+
     public class Order
     {
         public int Id { get; set; }
@@ -15,6 +24,8 @@ namespace ITSystem
         public int Quantity { get; set; }
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public int Progress { get; set; } = 0;
+        public int? RuntimeSeconds { get; set; }
     }
 
     public class MachineRuntime
