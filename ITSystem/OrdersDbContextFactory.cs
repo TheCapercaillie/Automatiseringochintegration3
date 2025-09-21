@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 
 namespace ITSystem
 {
@@ -9,9 +8,8 @@ namespace ITSystem
     {
         public OrdersDbContext CreateDbContext(string[] args)
         {
-            var basePath = Directory.GetParent(AppContext.BaseDirectory)?.Parent?.FullName ?? Directory.GetCurrentDirectory();
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(basePath)
+                .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 

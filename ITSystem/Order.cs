@@ -16,4 +16,11 @@ namespace ITSystem
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
+
+    public class MachineRuntime
+    {
+        public int Id { get; set; }
+        public DateTime Timestamp { get; set; }
+        public int RuntimeSeconds { get; set; }
+    }
 }

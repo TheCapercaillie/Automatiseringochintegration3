@@ -13,5 +13,6 @@ namespace ITSystem
         }
 
         public DbSet<Order> Orders { get; set; }
+        public DbSet<MachineRuntime> MachineRuntimes { get; set; }
     }
 }
